@@ -3,17 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ノコギリクワガタ AR（新規テスト）</title>
+  <title>ノコギリクワガタ AR（キャッシュ回避テスト）</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
   <style>
     body { margin:0; font-family:sans-serif; text-align:center; background:#fff; }
-    h1 { margin-top:24px; }
-    p { margin:16px; }
-    a { display:inline-block; margin-top:28px; padding:16px 26px; border-radius:12px; background:#2e7d32; color:#fff; text-decoration:none; font-size:18px; }
+    h1 { margin-top:20px; }
+    p { margin:12px 16px; }
+    model-viewer { width:100%; height:62vh; background:#f5f5f5; }
+    .ios-ar-button {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin:20px 0 30px;
+      padding:16px 26px;
+      border-radius:12px;
+      background:#2e7d32;
+      color:#fff;
+      text-decoration:none;
+      font-size:18px;
+    }
+    .ios-ar-button img { width:22px; height:22px; }
   </style>
 </head>
 <body>
   <h1>ノコギリクワガタ</h1>
-  <p>新しいキャッシュなしテストページです。</p>
-  <a rel="ar" href="../stag-beetle/Sawtooth_Stag_FINAL_FRESH_20260916.usdz">iPhoneでARを見る</a>
+  <p>下に3Dモデルが見えます。iPhoneでは下の緑のボタンからARを開いてください。</p>
+
+  <model-viewer
+    src="../stag-beetle/Sawtooth_Stag_NoCube.glb"
+    alt="ノコギリクワガタの3Dモデル"
+    camera-controls
+    autoplay
+    shadow-intensity="1">
+  </model-viewer>
+
+  <a class="ios-ar-button" rel="ar" href="../stag-beetle/Sawtooth_Stag_FINAL_FRESH_20260916.usdz">
+    <img src="../stag-beetle/ar-icon.svg" alt="">
+    iPhoneでARを見る
+  </a>
 </body>
 </html>
