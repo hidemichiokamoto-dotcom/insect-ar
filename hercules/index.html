@@ -32,7 +32,13 @@
       margin: 18px 0 28px;
     }
     .ios-ar-wrap { display: none; }
-    body.ios .android-only { display: none; }
+    .ios-ar-button img {
+      width: 22px;
+      height: 22px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    body.ios .ar-button { display: none; }
     body.ios .ios-ar-wrap { display: block; }
   </style>
 </head>
@@ -40,8 +46,7 @@
   <h1>ヘラクレスオオカブト</h1>
 
   <model-viewer
-    class="android-only"
-    src="hercules_beetle.glb"
+    src="hercules_beetle_web.glb"
     alt="ヘラクレスオオカブトの3Dモデル"
     ar
     ar-modes="scene-viewer webxr"
@@ -53,6 +58,7 @@
 
   <div class="ios-ar-wrap">
     <a class="ios-ar-button" rel="ar" href="Hercules_Beetle.usdz">
+      <img src="ar-icon.svg" alt="">
       iPhoneでARを見る
     </a>
   </div>
